@@ -10,7 +10,9 @@ autoload -U add-zsh-hook
 #=-----------------------------------------------------------------------------
 #=> Colors ------------------------------------------------------------------=>
 #=-----------------------------------------------------------------------------
+##
 # SYMBOLS
+##
 ROOTSYM=$FG[081]
 LINESYM=$ROOTSYM
 at0=$FG[154]
@@ -19,7 +21,9 @@ at2=$FG[156]
 at3=$FG[157]
 at4=$FG[158]
 at5=$FG[159]
+##
 # GIT SYMS
+##
 GIT_MOD_COLOR=$ROOTSYM
 at13=$FG[122]
 at12=$FG[121]
@@ -32,10 +36,21 @@ at9=$FG[118]
 #  % charlespantoga on mac-chapan in ~
 #  ❯❯ ...typing here...
 #----------------------------------------------
+
+##
+# Prompt 1 => Regular Shell
+##
 PROMPT='
-%{$ROOTSYM%}%# %{$at0%}%n %{$reset_color%}%{$at1%}on %{$reset_color%}%{$at2%}%m %{$reset_color%}%{$at3%}in %{$reset_color%}%{$at4%}%~ %{$reset_color%}%{$at5%}$(git_prompt_info)%{$reset_color%}%{$ROOTSYM%}$(git_prompt_status)%{$reset_color%}
+%{$ROOTSYM%}%# %{$reset_color%}%{$at0%}%n %{$reset_color%}%{$at1%}on %{$reset_color%}%{$at2%}%m %{$reset_color%}%{$at3%}in %{$reset_color%}%{$at4%}%~ %{$reset_color%}%{$at5%}$(git_prompt_info)%{$reset_color%}%{$ROOTSYM%}$(git_prompt_status)%{$reset_color%}
 %{$LINESYM%}❯❯ %{$reset_color%}'
+##
+# Rightside Prompt 1
+##
 RPS1="${return_code}${date}"
+##
+# Prompt 2 => Subcommand.
+##
+PS2='%{$FG[044]%}[%{$reset_color%}%{$FG[084]%}$(echo '%_' | tr "[:lower:]" "[:upper:]")%{$reset_color%}%{$FG[044]%}]=> %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" 
 %{$ROOTSYM%}∫ %{$at9%}‹git› %{$at10%}using%{$at11%} branch%{$at12%}  "
