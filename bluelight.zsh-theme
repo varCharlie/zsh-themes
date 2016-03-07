@@ -50,7 +50,7 @@ RPS1="${return_code}${date}"
 ##
 # Prompt 2 => Subcommand.
 ##
-PS2='%{$FG[044]%}[%{$reset_color%}%{$FG[084]%}$(echo '%_' | tr "[:lower:]" "[:upper:]")%{$reset_color%}%{$FG[044]%}]=> %{$reset_color%}'
+PS2='%{$FG[044]%}[%{$reset_color%}%{$FG[084]%}'%_'%{$reset_color%}%{$FG[044]%}]=> %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" 
 %{$ROOTSYM%}∫ %{$at9%}‹git› %{$at10%}using%{$at11%} branch%{$at12%}  "
