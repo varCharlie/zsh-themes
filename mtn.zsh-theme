@@ -25,6 +25,7 @@ at5=$FG[159]
 # GIT SYMS
 ##
 GIT_MOD_COLOR=$FG[240]
+at14=$FG[123]
 at13=$FG[122]
 at12=$FG[121]
 at11=$FG[120]
@@ -41,7 +42,7 @@ at9=$FG[118]
 # Prompt 1 => Regular Shell
 ##
 PROMPT='
-%{$ROOTSYM%}%# %{$reset_color%}%{$at0%}%n %{$reset_color%}%{$at1%}on %{$reset_color%}%{$at2%}%m %{$reset_color%}%{$at3%}in %{$reset_color%}%{$at4%}%~ %{$reset_color%}%{$at5%}$(git_prompt_info)%{$reset_color%}%{$ROOTSYM%}$(git_prompt_status)%{$reset_color%}
+%{$ROOTSYM%}%# %{$reset_color%}%{$at14%}%n %{$reset_color%}%{$at13%}using %{$reset_color%}%{$at12%}zsh %{$reset_color%}%{$at11%}on %{$reset_color%}%{$at2%}%m %{$reset_color%}%{$at3%}in %{$reset_color%}%{$at4%}%~ %{$reset_color%}%{$at5%}$(git_prompt_info)%{$reset_color%}%{$ROOTSYM%}$(git_prompt_status)%{$reset_color%}
 %{$LINESYM%}❯❯ %{$reset_color%}'
 ##
 # Rightside Prompt 1
